@@ -1,0 +1,12 @@
+{
+  "name": "node-app",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "nodemon -w src --transpileOnly src/app.ts"
+  },
+  "dependencies": {
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1"
+  }
+}
