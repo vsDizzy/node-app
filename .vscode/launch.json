@@ -8,6 +8,7 @@
       "type": "node",
       "request": "launch",
       "name": "Launch Program",
+      "skipFiles": ["<node_internals>/**", "node_modules/**"],
       "runtimeArgs": ["-r", "ts-node/register/transpile-only"],
       "args": ["app.ts"]
     }
