@@ -2,9 +2,9 @@
   "name": "node-app",
   "version": "0.0.1",
   "private": true,
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "ts-node": "^8.10.2",
-    "typescript": "^3.9.6"
-  },
-  "devDependencies": {}
+    "typescript": "^3.9.7"
+  }
 }
