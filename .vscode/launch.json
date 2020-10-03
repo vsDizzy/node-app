@@ -10,7 +10,7 @@
       "name": "Launch Program",
       "skipFiles": ["<node_internals>/**", "node_modules/**"],
       "runtimeArgs": ["-r", "ts-node/register/transpile-only"],
-      "args": ["app"]
+      "args": ["src/app"]
     }
   ]
 }
