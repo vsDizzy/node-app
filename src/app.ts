@@ -1,11 +1,11 @@
 import * as ws from 'ws'
-import { RpcHost } from './rpc-host'
+import { SocketHost } from './rpc-host'
 import './server'
 import type { ServerApi } from './server-api'
 
 const socket = new ws('ws://localhost:5000')
 socket.on('open', async () => {
-  const rh = new RpcHost(socket)
+  const rh = new SocketHost(socket)
 
   const serverApi = rh.getEndpoint<ServerApi>('server-api')
   console.log('Calling server methods:')
