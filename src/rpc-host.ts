@@ -14,12 +14,11 @@ export class RpcHost extends Host {
 
     const server = new Server(this)
 
-    socket.on('message', async (data) => {
+    socket.on('message', (data) => {
       const req = this.parse(data as string)
-      const res = await server.processRequestMessage(req)
-      this.send(res)
 
-      this.client.processResponseMessage(res)
+      server.processRequestMessage(req, (x) => this.send(x))
+      this.client.processResponseMessage(req)
     })
   }
 

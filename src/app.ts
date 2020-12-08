@@ -10,4 +10,6 @@ socket.on('open', async () => {
   const serverApi = rh.getEndpoint<ServerApi>('server-api')
   console.log('Calling server methods:')
   console.log('1 + 2 =', await serverApi.add(1, 2))
+
+  socket.close()
 })
