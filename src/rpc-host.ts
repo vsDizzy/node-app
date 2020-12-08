@@ -12,12 +12,16 @@ export class RpcHost extends Host {
   constructor(private socket: ws) {
     super()
 
-    const server = new Server(this)
+    const server = new Server()
 
     socket.on('message', (data) => {
       const req = this.parse(data as string)
 
-      server.processRequestMessage(req, (x) => this.send(x))
+      server.processRequestMessage(
+        req,
+        (call) => this.callEndpoint(call),
+        (x) => this.send(x)
+      )
       this.client.processResponseMessage(req)
     })
   }
