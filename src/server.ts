@@ -1,5 +1,5 @@
+import { SocketHost } from 'rp-lib/src/socket-host'
 import * as ws from 'ws'
-import { SocketHost } from './rpc-host'
 import { ServerApi } from './server-api'
 
 const server = new ws.Server({ port: 5000 })

@@ -1,5 +1,5 @@
+import { SocketHost } from 'rp-lib/src/socket-host'
 import * as ws from 'ws'
-import { SocketHost } from './rpc-host'
 import './server'
 import type { ServerApi } from './server-api'
 
